@@ -10,10 +10,10 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "NCC | Anna University",
-  description: "Official NCC Website of Anna University, Chennai",
+  title: "AAMZ Security Solutions",
+  description: "Official AAMZ Security Website",
   keywords:
-    "NCC, Anna University, NCC Anna University, NCC AU, National Cadet Corps Anna University, National Cadet Corps AU, NCC College of Engineering Guindy, NCC CEG, NCC ACTech, 1 TN CTC NCC",
+    "AAMZ Security, Security, Security Solutions, AAMZ SS, top-tier security services, comprehensive security solutions, integrity, honesty, and transparency, Security Lahore, Best Security Solution",
 };
 
 export default function RootLayout({
