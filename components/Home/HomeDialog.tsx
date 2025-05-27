@@ -17,8 +17,8 @@ const HomeDialog = () => {
     <Dialog>
       <DialogTrigger asChild>
         <button
-          className={`py-1.5 px-4 md:py-2 sm:px-6   rounded-md border border-rose-400 dark:border-blue-500 bg-rose-400 dark:bg-blue-500 text-white
-              hover:border-rose-500  hover:dark:border-sky-700 hover:dark:bg-sky-700 hover:bg-rose-500 transition-colors select-none
+          className={`py-1.5 px-4 md:py-2 sm:px-6   rounded-md border border-green-800 dark:border-[#00852E] bg-[#2d5433] dark:bg-[#00852E] text-white
+              hover:border-green-800 hover:dark:border-green-400 hover:dark:bg-[#2d5433] hover:bg-[#00852E] transition-colors select-none
               font-medium text-lg [word-spacing:2px] font-sans`}
         >
           <p className="drop-shadow-[1px_2px_1px_rgba(0,0,0,0.5)]">

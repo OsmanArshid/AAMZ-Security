@@ -8,11 +8,11 @@ import SectionHeading from "../common/SectionHeading";
 import { heroLogos } from "@/resources/hero";
 import HomeDialog from "./HomeDialog";
 import aamzflag from "/images/logos/AAMZ.png";
+import heroPic from "/images/logos/hero.png";
+
 
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
-
-  const nccShoulder = "/images/wallpapers/ncc_shoulder.png";
 
   const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
   return (
@@ -51,7 +51,7 @@ const Hero = () => {
               </span>
               , securing the{" "}
               <span className="text-sky-800 dark:text-sky-500 font-extrabold">
-                future
+                Future
               </span>
               .
             </h1>
@@ -59,14 +59,16 @@ const Hero = () => {
           <br />
           
           <p className="max-w-[620px] px-1 pr-2 text-sm sm:text-base text-gray-700 dark:text-slate-400 max-[900px]:text-center">
-            Prepare yourself for a lifetime of leadership and excellence. Unlock
-            opportunities, embrace challenges, and create lasting memories. Join
-            us on a journey of courage, character, and service.
+            AAMZ Security Solutions Pvt. Ltd. is a trusted name in
+            providing top-tier security services across Pakistan. Licensed by the
+            Interior Ministry, we operate nationwide with a reputation for efficiency,
+            reliability, and a spotless record of zero misconduct.
           </p>
           
           <br />
           <div className="flex flex-col gap-6 min-[900px]:gap-6 min-[900px]:flex-row">
           
+
             <HomeDialog />
             <button
               className={`flex items-center justify-center rounded-md border-2 font-semibold text-md tracking-wide border-gray-400 bg-slate-200/[0.7] 
@@ -87,16 +89,16 @@ const Hero = () => {
             rounded-bl-3xl overflow-clip drop-shadow-md border-b-2 border-r-2 border-l-2 border-transparent dark:border-slate-700"
             >
               <Image
-                src={nccShoulder}
-                blurDataURL={nccShoulder.replace("images", "min_images")}
+                src={heroPic}
                 placeholder="blur"
                 layout="fill"
-                alt="Hero Image showing NCC arm badge with Anna University Red building background"
+                alt="AAMZ Main picture"
               />
             </div>
           </div>
         )}
       </div>
+
       <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10 select-text">
         {heroLogos.map((image: any, index: number) => (
           <div key={index} className={`${logoTail} p-${image.padding}`}>

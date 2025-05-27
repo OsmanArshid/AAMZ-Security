@@ -25,7 +25,7 @@ const ButtonGroup = (props: any) => {
   // Render
   if (!isDomLoaded) return <nav></nav>;
   return (
-    <nav className="flex items-center rounded-md border border-rose-300 dark:border-slate-700 overflow-hidden">
+    <nav className="flex items-center rounded-md border border-green-400 dark:border-green-700 overflow-hidden">
       <Link
         href={"/"}
         className={activePage === "home" ? activeTail : buttonTail}
