@@ -64,7 +64,7 @@ const GalleryPosters = () => {
                 <div
                   key={item.id}
                   className="p-0.5 hover:scale-[101%] hover:p-0 m-0 md:m-0.5 lg:m-1 md:rounded-md overflow-hidden border-2 
-                border-gray-400 dark:border-slate-950 bg-rose-100 dark:bg-slate-800 transition-transform"
+                border-gray-400 dark:border-slate-950 bg-blue-100 dark:bg-slate-800 transition-transform"
                   onClick={() => handleImageClick(index)}
                 >
                   <AspectRatio ratio={1} className="relative">

@@ -67,7 +67,7 @@ const LeaderCard = (props: any) => {
       )}
       <div className="py-4 w-full flex flex-col items-center justify-between">
         <div>
-          <div className="mx-auto w-fit rounded-full px-4 py-1 mb-2 border border-rose-200 dark:border-slate-600 bg-rose-100 dark:bg-slate-800">
+          <div className="mx-auto w-fit rounded-full px-4 py-1 mb-2 border border-blue-200 dark:border-slate-600 bg-blue-100 dark:bg-slate-800">
             <p className="text-xs font-medium dark:text-slate-300 tracking-wider">
               {plat}
             </p>

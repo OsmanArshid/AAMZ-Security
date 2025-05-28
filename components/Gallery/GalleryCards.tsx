@@ -65,9 +65,9 @@ const GalleryThumb = (props: any) => {
       onMouseLeave={() => setIsHovered(false)}
       className={`
     relative m-1 sm:m-1.5 md:m-2 lg:m-3 border-2 rounded-md overflow-hidden
-    bg-rose-200/[0.7] dark:bg-slate-800/[0.7] border-rose-300 select-none
-    drop-shadow-sm hover:drop-shadow-xl hover:cursor-pointer hover:border-rose-500 
-    dark:border-slate-200/[0.2] dark:hover:border-rose-400/[0.7]
+    bg-blue-200/[0.7] dark:bg-slate-800/[0.7] border-blue-300 select-none
+    drop-shadow-sm hover:drop-shadow-xl hover:cursor-pointer hover:border-blue-500 
+    dark:border-slate-200/[0.2] dark:hover:border-blue-400/[0.7]
      hover:scale-[1.02] md:hover:scale-[1.03] transition`}
     >
       <AspectRatio className="relative" ratio={16 / 9}>
@@ -86,7 +86,7 @@ const GalleryThumb = (props: any) => {
       <div className="top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute flex items-center">
         <h3
           className={`text-center max-[330px]:text-sm text-base min-[400px]:text-xl md:text-2xl lg:text-[1.65rem] font-bold tracking-wider drop-shadow-md ${
-            isHovered ? "text-rose-400" : "text-slate-50 dark:text-slate-200"
+            isHovered ? "text-blue-400" : "text-slate-50 dark:text-slate-200"
           } transition-colors`}
         >
           {title}

@@ -41,7 +41,7 @@ const ReportContent = (props: any) => {
           </div>
           <ReportCarousel images={images} captions={captions} />
         </div>
-        <article className="px-1 prose prose-sm sm:prose-base max-w-none dark:prose-invert overflow-x-auto">
+        <article className="px-1 pblue pblue-sm sm:pblue-base max-w-none dark:pblue-invert overflow-x-auto">
           <Markdown>{content}</Markdown>
         </article>
       </div>
@@ -56,8 +56,8 @@ function BackButtonFallback() {
     <div className="mb-6">
       <div
         className="w-max flex px-1 sm:px-3 items-center rounded-md font-medium
-bg-rose-200 dark:bg-slate-800 border border-rose-300 dark:border-slate-700  transition-colors
-hover:bg-rose-300 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600"
+bg-blue-200 dark:bg-slate-800 border border-blue-300 dark:border-slate-700  transition-colors
+hover:bg-blue-300 dark:hover:bg-slate-700 hover:border-blue-400 dark:hover:border-slate-600"
       >
         <div className="m-1.5 sm:m-2" />
         <p className="mr-1.5 sm:mr-2 text-sm sm:text-md font-semibold"></p>

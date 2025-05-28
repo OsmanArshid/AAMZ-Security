@@ -38,8 +38,8 @@ const HomeDialog = () => {
           <button>
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSfct-Wep1ICs8F7Ys5OMvx_ePevqHuUntpYHjCNm8Zedd4NNQ/viewform"
-              className="rounded-md border border-rose-400 dark:border-blue-500 bg-rose-400 dark:bg-blue-500 text-white
-              hover:border-rose-500  hover:dark:border-sky-700 hover:dark:bg-sky-700 hover:bg-rose-500 transition-colors select-none
+              className="rounded-md border border-blue-400 dark:border-blue-500 bg-blue-400 dark:bg-blue-500 text-white
+              hover:border-blue-500  hover:dark:border-sky-700 hover:dark:bg-sky-700 hover:bg-blue-500 transition-colors select-none
               font-medium text-lg font-sans
               px-4 py-2"
               target="_blank"
@@ -52,7 +52,7 @@ const HomeDialog = () => {
             <p className="mx-2 text-sm text-gray-500 dark:text-slate-400">or</p>
             <div className="mt-1 h-[1px] w-full bg-gray-300 dark:bg-slate-700"></div>
           </div>
-          <div className="mt-4 max-w-xl rounded-lg overflow-hidden border-2 bg-rose-100 dark:bg-slate-900">
+          <div className="mt-4 max-w-xl rounded-lg overflow-hidden border-2 bg-blue-100 dark:bg-slate-900">
             <AspectRatio ratio={1} className="relative">
               <Image
                 src={admission_qr}

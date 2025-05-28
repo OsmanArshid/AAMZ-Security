@@ -18,10 +18,10 @@ const NavSheet = (props: any) => {
 
   // Tailwind CSS
   const commonTail = `my-3 px-8 py-2 rounded-md border select-none text-center`;
-  const buttonTail = `${commonTail} border-gray-400 hover:bg-rose-200 dark:hover:bg-slate-800 dark:border-slate-700 
+  const buttonTail = `${commonTail} border-gray-400 hover:bg-gray-600 dark:hover:bg-slate-800 dark:border-slate-700 
   text-gray-900 dark:text-slate-300 font-semibold transition-colors`;
-  const activeTail = `${commonTail} bg-red-300 dark:bg-slate-700 pointer-events-none font-extrabold 
-  border-rose-500 dark:border-slate-600 text-gray-900 dark:text-slate-300`;
+  const activeTail = `${commonTail} bg-gray-300 dark:bg-slate-700 pointer-events-none font-extrabold 
+  border-blue-500 dark:border-slate-600 text-gray-900 dark:text-slate-300`;
 
   // Hooks
   const [isSmallWindow, setIsSmallWindow] = useState(false);

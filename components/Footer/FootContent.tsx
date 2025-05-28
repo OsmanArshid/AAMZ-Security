@@ -89,9 +89,9 @@ export const FootContent = () => {
         />
         <SocialLink
           href={"https://www.youtube.com/@nccarmyannauniv.5771"}
-          hoverColor={"hover:bg-rose-200"}
-          hoverTextColor={"hover:text-rose-700"}
-          darkHoverColor={"dark:hover:text-rose-400"}
+          hoverColor={"hover:bg-blue-200"}
+          hoverTextColor={"hover:text-blue-700"}
+          darkHoverColor={"dark:hover:text-blue-400"}
           icon={Youtube}
           tooltip={"Youtube"}
         />

@@ -15,7 +15,7 @@ const AboutCamp = () => {
           <div className="col-span-12 md:col-span-5 p-4 flex flex-col gap-2 lg:gap-4">
             <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-bold">
               Unlocking{" "}
-              <span className="font-extrabold text-rose-500 dark:text-rose-300">
+              <span className="font-extrabold text-blue-500 dark:text-blue-300">
                 Extraordiary
               </span>{" "}
               Experiences

@@ -15,9 +15,9 @@ const ReportCarousel = (props: any) => {
   const thumbTail =
     "w-max m-2 rounded-md border border-gray-300 dark:border-slate-700";
   const thumbTailActive =
-    "w-max m-2  rounded-md border border-gray-700  dark:border-slate-400 bg-rose-200 dark:bg-slate-800";
-  const controlTail = `p-1 bg-rose-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300
-    hover:bg-rose-300 dark:hover:bg-slate-600  transition-colors`;
+    "w-max m-2  rounded-md border border-gray-700  dark:border-slate-400 bg-blue-200 dark:bg-slate-800";
+  const controlTail = `p-1 bg-blue-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300
+    hover:bg-blue-300 dark:hover:bg-slate-600  transition-colors`;
   const handleCarouselChange = (index: number) => {
     setActive(index);
   };
@@ -100,7 +100,7 @@ const ReportCarousel = (props: any) => {
         )}
         <Carousel
           selectedItem={active}
-          className="min-w-[300px] max-w-[600px] min-h-[200px] h-max md:rounded-md overflow-hidden bg-rose-200 dark:bg-slate-800"
+          className="min-w-[300px] max-w-[600px] min-h-[200px] h-max md:rounded-md overflow-hidden bg-blue-200 dark:bg-slate-800"
           autoPlay={autoplay}
           swipeable={true}
           infiniteLoop={true}

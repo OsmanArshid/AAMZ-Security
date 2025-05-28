@@ -65,8 +65,8 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({
   const shortTitleTail = `w-fit px-2 py-0.5 rounded-lg text-base font-bold border
       border-sky-400 dark:border-sky-600 bg-sky-200 dark:bg-sky-900 text-sky-950 dark:text-sky-200`;
 
-  const iconTail = `p-1 mr-2 pl-0 text-rose-800 dark:text-rose-300/[0.7]`;
-  const subHeadingTail = `text-base font-bold text-rose-900 dark:text-rose-300/[0.7]`;
+  const iconTail = `p-1 mr-2 pl-0 text-blue-800 dark:text-blue-300/[0.7]`;
+  const subHeadingTail = `text-base font-bold text-blue-900 dark:text-blue-300/[0.7]`;
 
   const descTail = `pl-2 text-sm sm:text-base dark:text-sky-200/[0.7] mb-4`;
   const activityTail = `pl-2 text-sm sm:text-base dark:text-sky-200/[0.7]`;

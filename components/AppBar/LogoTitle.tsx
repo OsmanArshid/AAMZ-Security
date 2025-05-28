@@ -44,7 +44,7 @@ const LogoTitle = () => {
 
   {/* Title */}
   <h1 className="h-6 text-lg font-extrabold dark:font-bold">
-    {pageTitleToggle ? `AAMZ Security Solutions` : `AAMZ SS`}
+    {pageTitleToggle ? `AAMZ Security Solutions` : `AAMZ`}
   </h1>
 </Link>
   );
