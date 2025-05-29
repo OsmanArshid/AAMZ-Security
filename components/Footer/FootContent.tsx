@@ -5,7 +5,6 @@ import {
   Linkedin,
   Youtube,
   MapPin,
-  Mail,
   AtSign,
   PhoneOutgoing,
 } from "lucide-react";
@@ -16,33 +15,33 @@ import { anos } from "@/resources/anos";
 export const FootContent = () => {
   return (
     <div
-      className={`rounded-sm sm:rounded-md m-2 border border-gray-300 dark:border-slate-700 
+      className={`rounded-sm sm:rounded-md m-2 border border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)] 
       min-w-[300px] w-full max-w-xl sm:w-full lg:w-max  h-fit lg:h-[26rem]
       flex flex-col justify-between px-6 text-[0.78rem]
       bg-slate-50 dark:bg-slate-950/[0.3] drop-shadow-sm dark:drop-shadow-none`}
     >
       <div className="mt-4 w-fit mx-auto min-[500px]:w-full min-[500px]:mx-auto">
         <h4 className="text-base font-bold pl-1 sm:px-8 pb-4 md:pb-0">
-          NCC Army Wing, Anna University
+          AAMZ Security Solutions
         </h4>
         <div className="pl-2 sm:px-7 mt-2 grid grid-cols-8 gap-4 gap-y-2">
           <MapPin className="col-span-1 h-4 w-4" size={20} />
           <div className="col-span-7">
             <p>
-              1 (TN) Composite Technical Company,
+              1st Floor, 77-K 
               <br />
-              Mardras &lsquo;B&rsquo; group,
+              DHA Phase 1, Lahore, 
               <br />
-              Anna University,
-              <br /> Guindy ,Chennai - 600025
+              54000, Pakistan
             </p>
           </div>
           <AtSign className="col-span-1 h-4 w-4" size={20} />
           <div className="col-span-7 mb-1">
-            <p>annaunivncc@gmail.com</p>
+            <p>....@gmail.com</p> {/* ------------------------------------------------------------ FIX THIS */}
           </div>
-          {anos.map((ano) => (
-            <div className="col-span-8" key={ano.id}>
+
+          {anos.map((ano) => ( // ------------------------------------------------------------ FIX THIS
+            <div className="py-5 col-span-8" key={ano.id}>
               <p className="col-span-8 pb-1 font-bold">{ano.name}</p>
               <div className="pl-8">
                 <div className="flex items-center justfy-content gap-2">
@@ -60,41 +59,52 @@ export const FootContent = () => {
               </div>
             </div>
           ))}
+
         </div>
       </div>
+      
       <div className="mx-auto max-w-[400px] gap-3 sm:gap-5 md:gap-6 flex flex-wrap justify-around px-4 py-4 lg:py-3">
+        
+        {/* fix this, gottttttaaaaaaaaa -------------------------------------------------------------------------------------*/}
         <SocialLink
-          href={"https://www.instagram.com/nccarmyannauniv/"}
+          href={"https://www.instagram.com"} 
           hoverColor={"hover:bg-pink-200"}
           hoverTextColor={"hover:text-pink-700"}
           darkHoverColor={"dark:hover:text-pink-400"}
           icon={Instagram}
           tooltip={"Instagram"}
         />
+        
+        {/* fix this, gottttttaaaaaaaaa -------------------------------------------------------------------------------------*/}
         <SocialLink
-          href={"https://www.facebook.com/nccarmy.annauniv"}
+          href={"https://www.facebook.com"} 
           hoverColor={"hover:bg-blue-200"}
           hoverTextColor={"hover:text-blue-700"}
           darkHoverColor={"dark:hover:text-blue-400"}
           icon={Facebook}
           tooltip={"Facebook"}
         />
+
+        {/* fix this, gottttttaaaaaaaaa -------------------------------------------------------------------------------------*/}
         <SocialLink
-          href={"https://www.linkedin.com/company/ncc-army-anna-university/"}
+          href={"https://www.linkedin.com/company/"} 
           hoverColor={"hover:bg-sky-200"}
           hoverTextColor={"hover:text-sky-700"}
           darkHoverColor={"dark:hover:text-sky-400"}
           icon={Linkedin}
           tooltip={"LinkedIn"}
         />
+        
+        {/* fix this, gottttttaaaaaaaaa ---------------------------------------------------------------------------------------*/}
         <SocialLink
-          href={"https://www.youtube.com/@nccarmyannauniv.5771"}
-          hoverColor={"hover:bg-blue-200"}
-          hoverTextColor={"hover:text-blue-700"}
-          darkHoverColor={"dark:hover:text-blue-400"}
+          href={"https://www.youtube.com"}
+          hoverColor={"hover:bg-red-200"}
+          hoverTextColor={"hover:text-red-700"}
+          darkHoverColor={"dark:hover:text-red-400"}
           icon={Youtube}
           tooltip={"Youtube"}
         />
+
       </div>
     </div>
   );

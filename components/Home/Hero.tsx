@@ -120,9 +120,8 @@ const Hero = () => {
       </div>
       <div className="text-sm sm:text-base max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
         <p>
-          Creating organized, trained, and motivated youth, equipped to provide
-          leadership in every sphere of life, and unwaveringly committed to
-          serving our nation.
+          Over the past 13 years, we have proudly safeguarded leading business, 
+          housing, and industrial groups, delivering on our mission with unwavering commitment
         </p>
       </div>
     </div>

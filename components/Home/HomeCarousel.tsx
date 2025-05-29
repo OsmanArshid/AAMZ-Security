@@ -14,10 +14,10 @@ import { controlTail } from "../common/tailwindCSS";
 HomeCarousel.displayName = "HomeCarousel";
 export default function HomeCarousel() {
   return (
-    <div className="max-w-6xl mx-auto  mt-8">
+    <div className="max-w-6xl mx-auto mt-8">
       <div className="p-0 md:p-2">
         <Quote>
-          <span className="text-red-900 dark:text-red-400 font-bold">
+          <span className="text-black dark:text-green-600 font-bold">
             Unite
           </span>
           ,{" "}
