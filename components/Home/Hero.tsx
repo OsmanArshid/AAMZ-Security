@@ -3,9 +3,7 @@ import React from "react";
 import Image from "next/legacy/image";
 import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
-import TooltipElement from "../common/TooltipElement";
 import SectionHeading from "../common/SectionHeading";
-import { heroLogos } from "@/resources/hero";
 import HomeDialog from "./HomeDialog";
 import aamzflag from "/images/logos/AAMZ.png";
 import heroPic from "/images/logos/hero.png";
@@ -14,9 +12,11 @@ import heroPic from "/images/logos/hero.png";
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
 
-  const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
+  // const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
+
+  //dark:bg-slate-900/[0.8]
   return (
-    <div className="bg-slate-100 dark:bg-slate-900/[0.8] relative overflow-clip  h-fit">
+    <div className="bg-slate-100 dark:bg-black relative overflow-clip  h-fit">
       
       <div className="relative max-w-7xl  mx-auto grid grid-cols-12  h-fit">
         

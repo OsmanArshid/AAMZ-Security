@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from "react"
 import Image from "next/image"
 import AZG from "/images/logos/AZG91.png"
+import Happily from "/images/logos/Happily.png"
+import crest from "/images/logos/cres.png"
 
 export default function ClientSection() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -39,8 +41,8 @@ export default function ClientSection() {
   // Client logos - replace with actual client logos
   const clients = [
     { name: "AZG9", logo: AZG },
-    { name: "Happilac", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "CRESCENT Bahuman Ltd", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "Happilac", logo: Happily },
+    { name: "Crescent Bahümán Ltd", logo: crest },
     { name: "CureMD", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Swyft Logistics", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Sheikhoo Sugar", logo: "/placeholder.svg?height=60&width=120" },
@@ -60,8 +62,8 @@ export default function ClientSection() {
     { name: "MGA Industries Pvt. Ltd.", logo: "/placeholder.svg?height=60&width=120" },
 
     { name: "AZG9", logo: AZG },
-    { name: "Happilac", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "CRESCENT Bahuman Ltd", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "Happilac", logo: Happily },
+    { name: "Crescent Bahümán Ltd", logo: crest },
     { name: "CureMD", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Swyft Logistics", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Sheikhoo Sugar", logo: "/placeholder.svg?height=60&width=120" },
@@ -94,7 +96,7 @@ export default function ClientSection() {
 
         <div className="relative w-full overflow-hidden">
           {/* Gradient overlay on left */}
-          <div className="absolute left-0 top-0 h-full w-16 z-10 bg-gradient-to-r from-[#0a0f1a] to-transparent"></div>
+          <div className="absolute left-0 top-0 h-full w-16 z-10 bg-gradient-to-r from-[rgba(87,199,133,1)] to-transparent"></div>
 
           {/* Scrolling container */}
           <div
@@ -123,7 +125,7 @@ export default function ClientSection() {
           </div>
 
           {/* Gradient overlay on right */}
-          <div className="absolute right-0 top-0 h-full w-16 z-10 bg-gradient-to-l from-[#0a0f1a] to-transparent"></div>
+          <div className="absolute right-0 top-0 h-full w-16 z-10 bg-gradient-to-l from-[rgba(87,199,133,1)] to-transparent"></div>
         </div>
       </div>
 
