@@ -79,9 +79,10 @@ const NavSheet = (props: any) => {
                 onClick={() => handleNavItemClick("members")}
                 className={activePage === "members" ? activeTail : buttonTail}
               >
-                Members
+                Services
               </Link>
-              <Link
+
+              {/* <Link
                 href={"/events"}
                 onClick={() => handleNavItemClick("events")}
                 className={activePage === "events" ? activeTail : buttonTail}
@@ -94,8 +95,8 @@ const NavSheet = (props: any) => {
                 className={activePage === "gallery" ? activeTail : buttonTail}
               >
                 Gallery
-              </Link>
-              <div></div>
+              </Link> */}
+              
             </div>
           </ScrollArea>
         </SheetDescription>
