@@ -15,7 +15,7 @@ import { anos } from "@/resources/anos";
 export const FootContent = () => {
   return (
     <div
-      className={`rounded-sm sm:rounded-md m-2 border border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)] 
+      id="contact" className={`rounded-sm sm:rounded-md m-2 border border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)] 
       min-w-[300px] w-full max-w-xl sm:w-full lg:w-max  h-fit lg:h-[26rem]
       flex flex-col justify-between px-6 text-[0.78rem]
       bg-slate-50 dark:bg-slate-950/[0.3] drop-shadow-sm dark:drop-shadow-none`}
@@ -96,14 +96,14 @@ export const FootContent = () => {
         />
         
         {/* fix this, gottttttaaaaaaaaa ---------------------------------------------------------------------------------------*/}
-        <SocialLink
+        {/* <SocialLink
           href={"https://www.youtube.com"}
           hoverColor={"hover:bg-red-200"}
           hoverTextColor={"hover:text-red-700"}
           darkHoverColor={"dark:hover:text-red-400"}
           icon={Youtube}
           tooltip={"Youtube"}
-        />
+        /> */}
 
       </div>
     </div>

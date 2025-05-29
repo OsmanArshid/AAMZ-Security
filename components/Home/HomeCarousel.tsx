@@ -15,6 +15,10 @@ import Quote from "@/components/common/Quote";
 HomeCarousel.displayName = "HomeCarousel";
 export default function HomeCarousel() {
   return (
+    <div
+      className="text-xs py-1 pb-2 border-t border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)]/[0.8] text-center 
+      text-slate-600 dark:text-slate-500 bg-white dark:bg-slate-950"
+    >
     <div className="max-w-6xl mx-auto mt-8">
       <div className="p-0 md:p-2">
         <Quote>
@@ -35,6 +39,7 @@ export default function HomeCarousel() {
         </div> */}
       </div>
     </div>
+  </div>
   );
 }
 

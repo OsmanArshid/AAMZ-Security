@@ -4,6 +4,16 @@ import Image from "next/image"
 import AZG from "/images/logos/AZG91.png"
 import Happily from "/images/logos/Happily.png"
 import crest from "/images/logos/cres.png"
+import curemd from "/images/logos/curemd_plain.png"
+import swyft from "/images/logos/swyft.jpg"
+import shekh from "/images/logos/shekh_sahab.png"
+import Master from "/images/logos/Master.png"
+import Changan from "/images/logos/Changan.jpg"
+import Cables from "/images/logos/Cables.jpg"
+import layers from "/images/logos/layers.png"
+
+
+
 
 export default function ClientSection() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -16,7 +26,7 @@ export default function ClientSection() {
     const clientWidth = scrollContainer.clientWidth
 
     let scrollPosition = 0
-    const speed = 0.5 // pixels per frame
+    const speed = 0.75 // pixels per frame
 
     const scroll = () => {
       scrollPosition += speed
@@ -43,13 +53,13 @@ export default function ClientSection() {
     { name: "AZG9", logo: AZG },
     { name: "Happilac", logo: Happily },
     { name: "Crescent Bahümán Ltd", logo: crest },
-    { name: "CureMD", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Swyft Logistics", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Sheikhoo Sugar", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "MasterFoam", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Changan Automobile", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "GM Cables & Pipes", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "LAYERS Bakeshop", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "CureMD", logo: curemd },
+    { name: "Swyft Logistics", logo: swyft},
+    { name: "Sheikhoo Sugar", logo: shekh },
+    { name: "MasterFoam", logo: Master },
+    { name: "Changan Automobile", logo: Changan },
+    { name: "GM Cables & Pipes", logo: Cables},
+    { name: "LAYERS Bakeshop", logo: layers },
     { name: "GWM Haval", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Support Soultions Hub", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Venevisión Play", logo: "/placeholder.svg?height=60&width=120" },
@@ -64,13 +74,13 @@ export default function ClientSection() {
     { name: "AZG9", logo: AZG },
     { name: "Happilac", logo: Happily },
     { name: "Crescent Bahümán Ltd", logo: crest },
-    { name: "CureMD", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Swyft Logistics", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Sheikhoo Sugar", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "MasterFoam", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Changan Automobile", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "GM Cables & Pipes", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "LAYERS Bakeshop", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "CureMD", logo: curemd },
+    { name: "Swyft Logistics", logo: swyft},
+    { name: "Sheikhoo Sugar", logo: shekh},
+    { name: "MasterFoam", logo: Master },
+    { name: "Changan Automobile", logo: Changan },
+    { name: "GM Cables & Pipes", logo: Cables },
+    { name: "LAYERS Bakeshop", logo: layers },
     { name: "GWM Haval", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Support Soultions Hub", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Venevisión Play", logo: "/placeholder.svg?height=60&width=120" },
@@ -84,6 +94,7 @@ export default function ClientSection() {
   ]
 
   return (
+    
     <section className="w-full py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
