@@ -40,14 +40,14 @@ const ButtonGroup = (props: any) => {
         About
       </Link>
       <div className={dividerTail} />
-      <Link
+      {/* <Link
         href={"/members"}
         className={activePage === "members" ? activeTail : buttonTail}
       >
         Members
       </Link>
-      <div className={dividerTail} />
-      <Link
+      <div className={dividerTail} /> */}
+      {/* <Link
         href={"/events"}
         className={activePage === "events" ? activeTail : buttonTail}
       >
@@ -59,7 +59,7 @@ const ButtonGroup = (props: any) => {
         className={activePage === "gallery" ? activeTail : buttonTail}
       >
         Gallery
-      </Link>
+      </Link> */}
     </nav>
   );
 };

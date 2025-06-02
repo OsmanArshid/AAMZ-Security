@@ -74,13 +74,13 @@ const NavSheet = (props: any) => {
               >
                 About
               </Link>
-              <Link
+              {/* <Link
                 href={"/members"}
                 onClick={() => handleNavItemClick("members")}
                 className={activePage === "members" ? activeTail : buttonTail}
               >
                 Services
-              </Link>
+              </Link> */}
 
               {/* <Link
                 href={"/events"}

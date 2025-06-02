@@ -55,8 +55,8 @@ const AnoCard = (props: any) => {
         height={187.5}
         src={src}
         alt={alt}
-        blurDataURL={src.replace("images", "min_images")}
-        placeholder="blur"
+        // blurDataURL={src.replace("images", "min_images")}
+        // placeholder="blur"
       />
       <div className="py-4 w-full flex flex-col items-center justify-between">
         <div>

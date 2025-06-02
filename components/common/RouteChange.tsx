@@ -19,15 +19,15 @@ const RouteChange = () => {
       case "about":
         setActivePage("about");
         break;
-      case "members":
-        setActivePage("members");
-        break;
-      case "events":
-        setActivePage("events");
-        break;
-      case "gallery":
-        setActivePage("gallery");
-        break;
+      // case "members":
+      //   setActivePage("members");
+      //   break;
+      // case "events":
+      //   setActivePage("events");
+      //   break;
+      // case "gallery":
+      //   setActivePage("gallery");
+      //   break;
       default:
         setActivePage("home");
         break;

@@ -7,33 +7,58 @@ const AboutHead = () => {
   return (
     <div className="bg-slate-100 dark:bg-slate-900/[0.7] relative h-max py-12">
       <div className=" max-w-6xl mx-auto">
-        <SectionHeading className="mb-6" icon={Info} title="About NCC" />
+        
+        <SectionHeading className="mb-6" 
+        icon={Info} 
+        title="About AAMZ Security" 
+        />
         <div>
           <p
             className="text-justify px-2 sm:px-4 text-sm md:text-base
           dark:text-slate-300"
           >
-            The National Cadet Corps (NCC) is a premier youth development
-            program in India. With its roots deeply embedded in the ideals of
-            discipline, leadership, and service, the NCC aims to shape the
-            character and potential of young individuals across the country.
-            Through a structured training program, cadets undergo a
-            transformative journey that instills qualities such as integrity,
-            selflessness, and a sense of responsibility towards society. NCC
-            cadets engage in various activities, including military training,
-            community service, adventure sports, and cultural events, fostering
-            holistic development. By promoting values of patriotism, unity, and
-            social integration, the NCC plays a crucial role in nation-building.
-            The program also opens doors to numerous career opportunities,
-            scholarships, and international exchange programs.
+            Established in 2012, AAMZ Security Solutions Pvt. Ltd. is a trusted name in
+            providing top-tier security services across Pakistan. Licensed by the
+            Interior Ministry, we operate nationwide with a reputation for efficiency,
+            reliability, and a spotless record of zero misconduct. Over the past 13
+            years, we have proudly safeguarded leading business, housing, and
+            industrial groups, delivering on our mission with unwavering commitment.
           </p>
         </div>
-        <SectionHeading
-          className="mb-4 mt-10"
-          icon={Target}
-          title="Objectives of NCC"
+        
+        <SectionHeading className="mt-20 mb-6" 
+        icon={Info} 
+        title="Vision of AAMZ Security" 
         />
-        <div className="grid grid-cols-12 ">
+        <div>
+          <p
+            className="text-justify px-2 sm:px-4 text-sm md:text-base
+          dark:text-slate-300"
+          >
+            At AAMZ, our vision is to be the leading provider of
+            innovative and comprehensive security solutions. We aim to 
+            ensure peace of mind for our clients by addressing modern
+            security challenges and supporting law enforcement efforts 
+            to maintain regional stability. With a commitment to
+            excellence, we strive to empower businesses and communities through
+            adaptable, effective security services
+          </p>
+        </div>
+
+
+        <SectionHeading
+          className="mb-4 mt-20"
+          icon={Target}
+          title="Core Values of AAMZ Security"
+        />
+        <p className="text-justify px-2 sm:px-4 text-sm md:text-base
+          dark:text-slate-300"
+        > 
+        At AAMZ, our core values define who we
+        are and guide how we operate
+        </p>
+
+        <div className="mt-10 grid grid-cols-12 ">
           {objectives.map((objective) => (
             <ObjectiveCard
               key={objective.id}
@@ -49,6 +74,8 @@ const AboutHead = () => {
 };
 
 export default AboutHead;
+
+
 
 const ObjectiveCard = (props: any) => {
   const id = props.id;
