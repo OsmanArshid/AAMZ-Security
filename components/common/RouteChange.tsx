@@ -19,9 +19,10 @@ const RouteChange = () => {
       case "about":
         setActivePage("about");
         break;
-      // case "members":
-      //   setActivePage("members");
-      //   break;
+      case "services":
+        setActivePage("services");
+        break;
+        
       // case "events":
       //   setActivePage("events");
       //   break;

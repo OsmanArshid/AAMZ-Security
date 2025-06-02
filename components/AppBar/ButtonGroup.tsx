@@ -26,27 +26,33 @@ const ButtonGroup = (props: any) => {
   if (!isDomLoaded) return <nav></nav>;
   return (
     <nav className="flex items-center rounded-md border border-green-400 dark:border-green-700 overflow-hidden">
+      
       <Link
         href={"/"}
         className={activePage === "home" ? activeTail : buttonTail}
       >
         Home
       </Link>
+
       <div className={dividerTail} />
+      
       <Link
         href={"/about"}
         className={activePage === "about" ? activeTail : buttonTail}
       >
         About
       </Link>
+
       <div className={dividerTail} />
-      {/* <Link
-        href={"/members"}
-        className={activePage === "members" ? activeTail : buttonTail}
+      
+      <Link
+        href={"/services"}
+        className={activePage === "services" ? activeTail : buttonTail}
       >
-        Members
+        Services
       </Link>
-      <div className={dividerTail} /> */}
+
+
       {/* <Link
         href={"/events"}
         className={activePage === "events" ? activeTail : buttonTail}

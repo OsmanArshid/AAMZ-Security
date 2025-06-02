@@ -55,6 +55,7 @@ const NavSheet = (props: any) => {
         <SheetHeader></SheetHeader>
         <SheetDescription>
           <ScrollArea className="h-screen">
+            
             <div
               className={`flex flex-col py-4 pt-8 pb-12 ${
                 isSmallWindow ? "pr-6" : ""
@@ -67,6 +68,7 @@ const NavSheet = (props: any) => {
               >
                 Home
               </Link>
+              
               <Link
                 href={"/about"}
                 onClick={() => handleNavItemClick("about")}
@@ -74,13 +76,14 @@ const NavSheet = (props: any) => {
               >
                 About
               </Link>
-              {/* <Link
-                href={"/members"}
-                onClick={() => handleNavItemClick("members")}
-                className={activePage === "members" ? activeTail : buttonTail}
+              
+              <Link
+                href={"/services"}
+                onClick={() => handleNavItemClick("services")}
+                className={activePage === "services" ? activeTail : buttonTail}
               >
                 Services
-              </Link> */}
+              </Link>
 
               {/* <Link
                 href={"/events"}

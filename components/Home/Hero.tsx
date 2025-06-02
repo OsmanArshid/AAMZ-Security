@@ -15,6 +15,7 @@ const Hero = () => {
   // const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
 
   //dark:bg-slate-900/[0.8]
+  
   return (
     <div className="bg-slate-100 dark:bg-black relative overflow-clip  h-fit">
       
@@ -99,7 +100,7 @@ const Hero = () => {
         )}
       </div>
 
-      <div className="pt-[3.5rem] pb-8 text-sm sm:text-base max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
+      <div className="pt-[3.5rem] pb-8 text-sm sm:text-base max-w-2xl mx-auto text-center text-gray-500 dark:text-slate-400">
         <p>
           Over the past 13 years, we have proudly safeguarded leading business, 
           housing, and industrial groups, delivering on our mission with unwavering commitment
