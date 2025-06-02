@@ -8,7 +8,6 @@ export default function About() {
     <main>
       <div className="h-fit">
         <RouteChange />
-        {/* <AboutVideo /> */}
         <AboutHead />
         <AboutCamp />
       </div>

@@ -40,7 +40,6 @@ const CampButton = (props: any) => {
 type CampCardProps = {
   activities: string[]
   shortTitle: string
-  // duration: string;
   desc: string
   active: boolean
 }
@@ -76,6 +75,7 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({ a
       </div>
     )
   }
+
   //Render
   return (
     <div key={id} className={active ? cardTail : inactiveCardTail}>

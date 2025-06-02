@@ -17,7 +17,7 @@ const AboutCamp = () => {
           <div className="col-span-12 md:col-span-5 p-4 flex flex-col gap-2 lg:gap-4">
             <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-bold">
               Unlocking{" "}
-              <span className="font-extrabold text-green-400 dark:text-green-600">
+              <span className="font-extrabold text-[#00852E] dark:text-green-600">
                 Extraordinary
               </span>{" "}
               Experiences
@@ -51,7 +51,6 @@ const AboutCamp = () => {
                   active={active === index}
                   title={camp.title}
                   shortTitle={camp.shortTitle}
-                  // duration={camp.duration}
                   desc={camp.desc}
                   activities={camp.activities}
                 />
