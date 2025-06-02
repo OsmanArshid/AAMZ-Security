@@ -99,26 +99,6 @@ const Hero = () => {
         )}
       </div>
 
-      {/* <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10 select-text">
-        {heroLogos.map((image: any, index: number) => (
-          <div key={index} className={`${logoTail} p-${image.padding}`}>
-            <TooltipElement
-              element={
-                <Image
-                  height={image.height}
-                  width={image.width}
-                  blurDataURL={image.src.replace("images", "min_images")}
-                  placeholder="blur"
-                  src={image.src}
-                  alt={image.alt}
-                />
-              }
-              tooltip={image.tooltip}
-            />
-          </div>
-        ))}
-      </div> */}
-
       <div className="pt-[3.5rem] pb-8 text-sm sm:text-base max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
         <p>
           Over the past 13 years, we have proudly safeguarded leading business, 
