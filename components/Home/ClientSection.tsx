@@ -11,9 +11,16 @@ import Master from "/images/logos/Master.png"
 import Changan from "/images/logos/Changan.jpg"
 import Cables from "/images/logos/Cables.jpg"
 import layers from "/images/logos/layers.png"
-
-
-
+import GMV from "/images/logos/GMV.jpg"
+import SSH from "/images/logos/SSH.jpg"
+import Vplay from "/images/logos/Vplay.png"
+import cheeta from "/images/logos/cheeta.png"
+import LGS from "/images/logos/LGS.jpg"
+import KAMRAN from "/images/logos/KAMRAN.jpg"
+import ravi from "/images/logos/ravi.png"
+import damaan from "/images/logos/damaan.png"
+import imperial from "/images/logos/imperial.png"
+import MGA from "/images/logos/MGA.png"
 
 export default function ClientSection() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -60,16 +67,16 @@ export default function ClientSection() {
     { name: "Changan Automobile", logo: Changan },
     { name: "GM Cables & Pipes", logo: Cables},
     { name: "LAYERS Bakeshop", logo: layers },
-    { name: "GWM Haval", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Support Soultions Hub", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Venevisión Play", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Cheetay logistics", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "LGS School", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "KAMRAN Steel", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Ravi Motorcycles", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "DAMAAN group", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Imperial Synergies", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "MGA Industries Pvt. Ltd.", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "GWM Haval", logo: GMV },
+    { name: "Support Soultions Hub", logo: SSH },
+    { name: "Venevisión Play", logo: Vplay },
+    { name: "Cheetay logistics", logo: cheeta },
+    { name: "LGS School", logo: LGS },
+    { name: "KAMRAN Steel", logo: KAMRAN },
+    { name: "Ravi Motorcycles", logo: ravi },
+    { name: "DAMAAN group", logo: damaan },
+    { name: "Imperial Synergies", logo: imperial },
+    { name: "MGA Industries Pvt. Ltd.", logo: MGA },
 
     { name: "AZG9", logo: AZG },
     { name: "Happilac", logo: Happily },
@@ -81,16 +88,16 @@ export default function ClientSection() {
     { name: "Changan Automobile", logo: Changan },
     { name: "GM Cables & Pipes", logo: Cables },
     { name: "LAYERS Bakeshop", logo: layers },
-    { name: "GWM Haval", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Support Soultions Hub", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Venevisión Play", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Cheetay logistics", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "LGS School", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "KAMRAN Steel", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Ravi Motorcycles", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "DAMAAN group", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Imperial Synergies", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "MGA Industries Pvt. Ltd.", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "GWM Haval", logo: GMV },
+    { name: "Support Soultions Hub", logo: SSH },
+    { name: "Venevisión Play", logo: Vplay },
+    { name: "Cheetay logistics", logo: cheeta },
+    { name: "LGS School", logo: LGS },
+    { name: "KAMRAN Steel", logo: KAMRAN },
+    { name: "Ravi Motorcycles", logo: ravi },
+    { name: "DAMAAN group", logo: damaan },
+    { name: "Imperial Synergies", logo: imperial },
+    { name: "MGA Industries Pvt. Ltd.", logo: MGA },
   ]
 
   return (
