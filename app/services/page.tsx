@@ -1,10 +1,10 @@
 'use client';
 import dynamic from "next/dynamic";
-import RouteChange from "@/components/common/RouteChange"; // This can be server or client depending on its content
+import RouteChange from "@/components/common/RouteChange";
 
 const ServicesSection = dynamic(() => import("@/components/Services/ServicesSection"), { ssr: false });
 const ElectronicService = dynamic(() => import("@/components/Services/ElectronicService"), { ssr: false });
-// const Tiers = dynamic(() => import("@/components/Services/Tiers"), { ssr: false });
+const Tiers = dynamic(() => import("@/components/Services/Tiers"), { ssr: false });
 
 
 export default function Services() {
@@ -14,7 +14,7 @@ export default function Services() {
         <RouteChange />
         <ServicesSection />
         <ElectronicService />
-        {/* <Tiers /> */}
+        <Tiers />
       </div>
     </main>
   );

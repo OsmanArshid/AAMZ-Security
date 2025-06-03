@@ -161,35 +161,7 @@ const ElectronicServices = () => {
               </div>
             </div>
           </div>
-
-          {/* Call to Action */}
-          <div className="mt-16 text-center">
-  <div 
-    className="rounded-2xl p-8 text-white"
-    style={{
-      background:
-        "linear-gradient(180deg, rgba(0,133,46,1) 0%, rgba(87,199,133,1) 40%, rgba(0,0,0,1) 100%)",
-    }}
-  >
-    <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Facility?</h3>
-    <p className="text-green-100 mb-6 max-w-2xl mx-auto">
-      Contact our security experts today for a comprehensive consultation and customized electronic security
-      solution for your organization.
-    </p>
-    <button 
-      onClick={() => {
-        document.getElementById('contact')?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }}
-      className="bg-white text-[#00852E] px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
-    >
-      Get Free Consultation
-    </button>
-  </div>
-</div>
-</div>
+        </div>
       </div>
     </>
   )
