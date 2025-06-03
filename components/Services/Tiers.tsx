@@ -19,7 +19,6 @@ const Tiers = () => {
         "Basic Patrol Services",
         "Incident Reporting",
         "Emergency Response",
-        "Cost-Effective Solution",
       ],
       icon: Shield,
       gradient: "from-green-600 via-green-700 to-green-900",
@@ -33,7 +32,6 @@ const Tiers = () => {
       description:
         "Designed for clients requiring the highest level of protection, this premium service features highly skilled personnel, including former SSG commandos. Equipped with advanced gear, our elite team is prepared to handle any security threat with precision and expertise.",
       features: [
-        "Former SSG Commandos",
         "Advanced Tactical Equipment",
         "Specialized Threat Assessment",
         "VIP Protection Services",

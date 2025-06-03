@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { Tent, Text, List } from "lucide-react"
 
 const CampButton = (props: any) => {
@@ -49,29 +48,39 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({ a
   const id = props.id
   const title = props.title
   const shortTitle = props.shortTitle
-  // const duration = props.duration;
   const desc = props.desc
   const active = props.active
 
-  //Tailwind CSS
-  const cardTail = `border-2 rounded-md p-4 bg-green-100 dark:bg-slate-900 dark:border-slate-800 opacity-100 transition-opacity duration-500`
+  // Gradient backgrounds similar to Service Tier cards
+  const gradients = [
+    "from-green-600 via-green-700 to-green-900",
+    "from-slate-800 via-green-800 to-green-900",
+    "from-green-700 via-slate-700 to-slate-900",
+    "from-slate-700 via-green-700 to-green-800",
+  ]
+
+  // Use a gradient based on the card id or index
+  const gradientIndex = typeof id === "string" ? id.length % gradients.length : 0
+  const selectedGradient = gradients[gradientIndex]
+
+  //Tailwind CSS - Updated to match Service Tier cards
+  const cardTail = `relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 hover:shadow-3xl hover:scale-[1.02] bg-gradient-to-br ${selectedGradient} p-8 text-white opacity-100`
   const inactiveCardTail = `hidden opacity-0 transition-opacity duration-500`
 
-  const titleTail = `text-xl lg:text-2xl font-bold text-green-900 dark:text-green-200`
-  const shortTitleTail = `w-fit px-2 py-0.5 rounded-lg text-base font-bold border
-      border-green-400 dark:border-green-600 bg-green-200 dark:bg-green-900 text-green-950 dark:text-green-200`
+  const titleTail = `text-xl lg:text-2xl font-bold text-white leading-tight`
+  const shortTitleTail = `inline-flex items-center px-3 py-1.5 rounded-lg text-sm font-bold bg-white/20 backdrop-blur-sm border border-white/30 text-white`
 
-  const iconTail = `p-1 mr-2 pl-0 text-[#00852E] dark:text-green-300/[0.7]`
-  const subHeadingTail = `text-base font-bold text-[#00852E] dark:text-green-300/[0.7]`
+  const iconTail = `w-5 h-5 mr-2 text-green-300 flex-shrink-0`
+  const subHeadingTail = `text-base font-bold text-white flex items-center mb-3`
 
-  const descTail = `pl-2 text-sm sm:text-base dark:text-text-white mb-4`
-  const activityTail = `pl-2 text-sm sm:text-base dark:text-text-white`
+  const descTail = `text-green-100 leading-relaxed text-base mb-6 pl-2`
+  const activityTail = `text-green-100 text-sm leading-relaxed flex items-start gap-2 mb-2`
 
   function subHeading(Icon: any, title: string) {
     return (
-      <div className="flex items-center mb-2 ">
+      <div className={subHeadingTail}>
         <Icon className={iconTail} />
-        <h4 className={subHeadingTail}>{title}</h4>
+        <h4>{title}</h4>
       </div>
     )
   }
@@ -79,24 +88,34 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({ a
   //Render
   return (
     <div key={id} className={active ? cardTail : inactiveCardTail}>
-      <div className="flex flex-col min-[460px]:flex-row items:start min-[460px]:items-center gap-2 mb-2 pl-2 pb-3 border-b">
-        <p className={shortTitleTail}>{shortTitle}</p>
+      {/* Header Section */}
+      <div className="flex flex-col min-[460px]:flex-row items-start min-[460px]:items-center gap-3 mb-6 pb-4 border-b border-white/20">
+        <span className={shortTitleTail}>{shortTitle}</span>
         <h3 className={titleTail}>{title}</h3>
       </div>
-      {subHeading(Text, "Description")}
-      <p className={descTail}>{desc}</p>
-      <div className="flex flex-col min-[420px]:flex-row min-[420px]:items-end justify-between">
-        <div>
-          {subHeading(List, "Activities")}
-          <ul className="list-disc list-inside ">
-            {activities.map((activity: string, index) => (
-              <li key={index} className={activityTail}>
-                {activity}
-              </li>
-            ))}
-          </ul>
+
+      {/* Description Section */}
+      <div className="mb-6">
+        {subHeading(Text, "Description")}
+        <p className={descTail}>{desc}</p>
+      </div>
+
+      {/* Activities Section */}
+      <div>
+        {subHeading(List, "Activities")}
+        <div className="space-y-2">
+          {activities.map((activity: string, index) => (
+            <div key={index} className={activityTail}>
+              <div className="w-2 h-2 bg-green-300 rounded-full mt-2 flex-shrink-0"></div>
+              <span>{activity}</span>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Decorative Elements - Similar to Service Tier cards */}
+      <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-12 translate-x-12"></div>
+      <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/5 rounded-full translate-y-10 -translate-x-10"></div>
     </div>
   )
 }
