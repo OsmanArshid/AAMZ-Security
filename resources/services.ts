@@ -8,9 +8,7 @@ const services = [
     features: [
       "24/7 perimeter monitoring",
       "Access control systems",
-      "Emergency response protocols",
-      "Equipment and asset protection",
-      "Customized security assessments"
+      "Emergency response"
     ]
   },
   {
@@ -23,8 +21,7 @@ const services = [
       "Gated community security",
       "Visitor management systems",
       "CCTV surveillance",
-      "Patrol services",
-      "Emergency response teams"
+      "Patrol services"
     ]
   },
   {
@@ -36,9 +33,7 @@ const services = [
     features: [
       "Personal bodyguard services",
       "Threat assessment and analysis",
-      "Secure transportation",
-      "Event security planning",
-      "Risk mitigation strategies"
+      "Secure transportation"
     ]
   },
   {
@@ -51,8 +46,7 @@ const services = [
       "Event security planning",
       "Crowd control management",
       "VIP protection during events",
-      "Emergency evacuation procedures",
-      "Coordination with local authorities"
+      "Emergency evacuation"
     ]
   },
   {
@@ -63,10 +57,8 @@ const services = [
     icon: "Lightbulb",
     features: [
       "Security risk assessments",
-      "Customized security strategies",
+      "Customized security",
       "Technology integration advice",
-      "Staff training programs",
-      "Compliance and regulatory guidance"
     ]
   }
 ];

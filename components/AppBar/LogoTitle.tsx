@@ -22,13 +22,13 @@ const LogoTitle = () => {
   
   return (
 <Link
-  href="/"
-  className="relative group flex py-1.5 px-3 rounded-md items-center cursor-pointer border border-transparent transition-colors"
-  onClick={() => {
-    handleNavItemClick("home");
-  }}
->
-  {/* Gradient hover background that replaces both light and dark default hover colors */}
+    href="/"
+    className="relative group flex py-1.5 px-3 rounded-md items-center cursor-pointer border border-transparent transition-colors"
+    onClick={() => {
+      handleNavItemClick("home");
+    }}
+  >
+
   <div
     className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity -z-10"
     style={{
@@ -37,15 +37,15 @@ const LogoTitle = () => {
     }}
   />
 
-  {/* Logo */}
-  <div className="h-8 mr-4">
-    <Image width={28} height={37} src={aamzflag} alt="AAMZ logo" />
-  </div>
+    {/* Logo */}
+    <div className="h-8 mr-4">
+      <Image width={28} height={37} src={aamzflag} alt="AAMZ logo" />
+    </div>
 
-  {/* Title */}
-  <h1 className="h-6 text-lg font-extrabold dark:font-bold">
-    {pageTitleToggle ? `AAMZ Security Solutions` : `AAMZ`}
-  </h1>
+    {/* Title */}
+    <h1 className="h-6 text-lg font-extrabold dark:font-bold">
+      {pageTitleToggle ? `AAMZ Security Solutions` : `AAMZ`}
+    </h1>
 </Link>
   );
 };

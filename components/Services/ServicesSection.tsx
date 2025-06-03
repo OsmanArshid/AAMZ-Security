@@ -4,16 +4,11 @@ import services from "@/resources/services"
 // Get icon component
 const getIconComponent = (iconName: string) => {
   const iconMap: { [key: string]: any } = {
-    Building,
-    Home,
-    User,
-    Calendar,
-    Lightbulb,
-    Target,
-    Shield,
+    Building, Home, User, Calendar, Lightbulb, Target, Shield,
   }
   return iconMap[iconName] || Shield
 }
+
 
 // SectionHeading component
 const SectionHeading = ({
@@ -34,6 +29,7 @@ const SectionHeading = ({
   )
 }
 
+
 // SubHeading component
 const SubHeading = ({ iconName, title }: { iconName: string; title: string }) => {
   const IconComponent = getIconComponent(iconName)
@@ -46,31 +42,28 @@ const SubHeading = ({ iconName, title }: { iconName: string; title: string }) =>
   )
 }
 
-// Service Card Component with flip effect using inline styles
+
+// Service Card Component
 const ServiceCard = ({ service }: { service: any }) => {
   const IconComponent = getIconComponent(service.icon)
 
   const cardContainerStyle = {
-    perspective: "1000px",
-    height: "16rem", // 64 in tailwind
+    perspective: "3000px",
+    height: "17rem", // 64 in tailwind
   }
 
   const cardInnerStyle = {
     position: "relative" as const,
-    width: "100%",
-    height: "100%",
+    width: "120%",
+    height: "110%",
     transition: "transform 0.7s",
     transformStyle: "preserve-3d" as const,
-  }
-
-  const cardHoverStyle = {
-    transform: "rotateY(180deg)",
   }
 
   const cardFaceStyle = {
     position: "absolute" as const,
     width: "100%",
-    height: "100%",
+    height: "105%",
     backfaceVisibility: "hidden" as const,
     borderRadius: "0.5rem",
     borderWidth: "2px",
@@ -84,7 +77,8 @@ const ServiceCard = ({ service }: { service: any }) => {
   return (
     <div style={cardContainerStyle} className="group">
       <div style={cardInnerStyle} className="group-hover:[transform:rotateY(180deg)]">
-        {/* Front of card */}
+        
+        {/* front card */}
         <div
           style={cardFaceStyle}
           className="border-green-200 dark:border-slate-700 bg-gradient-to-br from-green-50 to-green-100 dark:from-slate-800 dark:to-slate-900 p-6 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -93,7 +87,6 @@ const ServiceCard = ({ service }: { service: any }) => {
             <IconComponent className="w-12 h-12 text-[#00852E] dark:text-green-400" />
           </div>
           <h3 className="text-xl font-bold text-green-900 dark:text-green-200 mb-2">{service.shortTitle}</h3>
-          <p className="text-sm text-green-700 dark:text-green-300/80 opacity-75">Hover to learn more</p>
         </div>
 
         {/* Back of card */}
@@ -145,11 +138,12 @@ const ServicesSection = () => {
   return (
     <div className="relative h-max py-12 pb-16">
       <div className="max-w-6xl mx-auto px-4">
+        
         <SectionHeading iconName="Shield" title="Security Services" className="mb-8" />
 
-        {/* Description Section - Centered */}
+        {/*Description Section*/}
         <div className="text-center mb-12 max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
+          <h3 className="mt-20 text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
             Comprehensive <span className="font-extrabold text-[#00852E] dark:text-green-600">Security</span> Solutions
           </h3>
 
@@ -160,8 +154,8 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Service Cards Grid - Full Width */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {/* Service Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

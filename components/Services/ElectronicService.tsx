@@ -113,65 +113,85 @@ const ElectronicServices = () => {
   const selectedService = electronicServices.find((service) => service.id === activeService)
 
   return (
-    <div className="relative py-16 bg-gradient-to-b from-white to-green-50/30 dark:from-slate-900 dark:to-slate-800">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <div className="p-4 bg-[#00852E] rounded-2xl">
-              <Zap className="w-10 h-10 text-white" />
-            </div>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-6">
-            Electronic Security
-            <span className="block text-[#00852E] dark:text-green-400">Services</span>
-          </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            At AAMZ, we provide advanced electronic security solutions designed to protect personnel, facilities, and
-            assets. Leveraging cutting-edge technology, our tailored e-security services ensure unmatched reliability
-            and peace of mind across all industries.
-          </p>
-        </div>
+    <>
+      <div 
+      className="border-t border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)]/[0.8] dark:bg-slate-950"
+      ></div>
 
-        {/* Services Grid and Details */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Services Grid */}
-          <div className="lg:col-span-2">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {electronicServices.map((service) => (
-                <ElectronicServiceCard
-                  key={service.id}
-                  service={service}
-                  isActive={activeService === service.id}
-                  onClick={setActiveService}
-                />
-              ))}
+      <div className="relative py-16 bg-gradient-to-b from-white to-green-50/30 dark:from-slate-900 dark:to-slate-800">
+        <div className="max-w-7xl mx-auto px-4">
+          
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <div className="p-4 bg-[#00852E] rounded-2xl">
+                <Zap className="w-10 h-10 text-white" />
+              </div>
             </div>
-          </div>
-
-          {/* Service Details Panel */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <ServiceDetailsPanel service={selectedService} />
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-[#00852E] to-green-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Facility?</h3>
-            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
-              Contact our security experts today for a comprehensive consultation and customized electronic security
-              solution for your organization.
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+              Electronic <span className="text-[#00852E] dark:text-green-600">Security</span>
+            </h2>
+            <p className="text-base dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+              At AAMZ, we provide advanced electronic security solutions designed to protect personnel, facilities, and
+              assets. Leveraging cutting-edge technology, our tailored e-security services ensure unmatched reliability
+              and peace of mind across all industries.
             </p>
-            <button className="bg-white text-[#00852E] px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors">
-              Get Free Consultation
-            </button>
           </div>
-        </div>
+
+          {/* Services Grid and Details */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Services Grid */}
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {electronicServices.map((service) => (
+                  <ElectronicServiceCard
+                    key={service.id}
+                    service={service}
+                    isActive={activeService === service.id}
+                    onClick={setActiveService}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Service Details Panel */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-8">
+                <ServiceDetailsPanel service={selectedService} />
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-16 text-center">
+  <div 
+    className="rounded-2xl p-8 text-white"
+    style={{
+      background:
+        "linear-gradient(180deg, rgba(0,133,46,1) 0%, rgba(87,199,133,1) 40%, rgba(0,0,0,1) 100%)",
+    }}
+  >
+    <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Facility?</h3>
+    <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+      Contact our security experts today for a comprehensive consultation and customized electronic security
+      solution for your organization.
+    </p>
+    <button 
+      onClick={() => {
+        document.getElementById('contact')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }}
+      className="bg-white text-[#00852E] px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
+    >
+      Get Free Consultation
+    </button>
+  </div>
+</div>
+</div>
       </div>
-    </div>
+    </>
   )
 }
 
