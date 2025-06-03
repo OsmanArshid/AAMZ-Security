@@ -1,183 +1,174 @@
-import React, { useState } from 'react';
-import { Shield, Building, Home, User, Calendar, Lightbulb, Target } from 'lucide-react';
-import services from '@/resources/services';
+import { Shield, Building, Home, User, Calendar, Lightbulb, Target } from "lucide-react"
+import services from "@/resources/services"
 
-
-// get icon component
-const getIconComponent = (iconName) => {
-  const iconMap = {
-    Building, Home, User, Calendar, Lightbulb, Target, Shield
-  };
-  return iconMap[iconName] || Shield;
-};
-
+// Get icon component
+const getIconComponent = (iconName: string) => {
+  const iconMap: { [key: string]: any } = {
+    Building,
+    Home,
+    User,
+    Calendar,
+    Lightbulb,
+    Target,
+    Shield,
+  }
+  return iconMap[iconName] || Shield
+}
 
 // SectionHeading component
-const SectionHeading = ({ iconName, title, className = "" }) => {
-  const IconComponent = getIconComponent(iconName);
+const SectionHeading = ({
+  iconName,
+  title,
+  className = "",
+}: {
+  iconName: string
+  title: string
+  className?: string
+}) => {
+  const IconComponent = getIconComponent(iconName)
   return (
     <div className={`flex items-center justify-center mb-8 ${className}`}>
       <IconComponent className="w-8 h-8 mr-3 text-[#00852E] dark:text-green-400" />
-      <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200">
-        {title}
-      </h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200">{title}</h2>
     </div>
-  );
-};
-
-
+  )
+}
 
 // SubHeading component
-const SubHeading = ({ iconName, title }) => {
-  const IconComponent = getIconComponent(iconName);
+const SubHeading = ({ iconName, title }: { iconName: string; title: string }) => {
+  const IconComponent = getIconComponent(iconName)
 
   return (
-    <div className="flex items-center mb-2">
-      <IconComponent className="p-1 mr-2 pl-0 text-[#00852E] dark:text-green-300/70" />
-      <h4 className="text-base font-bold text-[#00852E] dark:text-green-300/70">{title}</h4>
+    <div className="flex items-center mb-3">
+      <IconComponent className="w-4 h-4 mr-2 text-[#00852E] dark:text-green-300/70" />
+      <h4 className="text-sm font-bold text-[#00852E] dark:text-green-300/70">{title}</h4>
     </div>
-  );
-};
+  )
+}
 
+// Service Card Component with flip effect using inline styles
+const ServiceCard = ({ service }: { service: any }) => {
+  const IconComponent = getIconComponent(service.icon)
 
+  const cardContainerStyle = {
+    perspective: "1000px",
+    height: "16rem", // 64 in tailwind
+  }
 
-// Service Button Component
-const ServiceButton = ({ id, title, iconName, active, onClick }) => {
-  const IconComponent = getIconComponent(iconName);
-  
-  return (
-    <button
-      className={`border rounded-md col-span-6 sm:col-span-4 md:col-span-6 lg:col-span-4 xl:col-span-2 flex flex-col items-center px-4 py-3 transition-colors select-none cursor-pointer ${
-        active 
-          ? 'bg-green-200/80 dark:bg-slate-800/90 text-green-950 dark:text-slate-100 border-green-300 dark:border-slate-700'
-          : ''
-      }`}
-      onClick={() => onClick(id)}
-    >
-      <IconComponent 
-        className={`mb-2 ${
-          active 
-            ? 'text-[#00852E] dark:text-green-400' 
-            : 'text-green-900/50 dark:text-green-300/50'
-        }`} 
-        size={24} 
-      />
-      <h4 className={`text-center text-sm ${
-        active 
-          ? 'font-bold text-[#00852E] dark:text-green-400' 
-          : 'font-medium text-green-900/80 dark:text-slate-200/80'
-      }`}>
-        {title}
-      </h4>
-    </button>
-  );
-};
+  const cardInnerStyle = {
+    position: "relative" as const,
+    width: "100%",
+    height: "100%",
+    transition: "transform 0.7s",
+    transformStyle: "preserve-3d" as const,
+  }
 
+  const cardHoverStyle = {
+    transform: "rotateY(180deg)",
+  }
 
-// Service Card Component
-const ServiceCard = ({ id, title, shortTitle, desc, iconName, features, active }) => {
-  const IconComponent = getIconComponent(iconName);
+  const cardFaceStyle = {
+    position: "absolute" as const,
+    width: "100%",
+    height: "100%",
+    backfaceVisibility: "hidden" as const,
+    borderRadius: "0.5rem",
+    borderWidth: "2px",
+  }
 
-  if (!active) return null;
+  const cardBackStyle = {
+    ...cardFaceStyle,
+    transform: "rotateY(180deg)",
+  }
 
   return (
-    <div className="border-2 rounded-md p-6 bg-green-100 dark:bg-slate-900 dark:border-slate-800 opacity-100 transition-opacity duration-500">
-      <div className="flex flex-col min-[460px]:flex-row items-start min-[460px]:items-center gap-3 mb-4 pl-2 pb-4 border-b border-green-200 dark:border-slate-700">
-        <div className="flex items-center gap-3">
-          <IconComponent className="text-[#00852E] dark:text-green-400" size={28} />
-          <p className="w-fit px-3 py-1 rounded-lg text-base font-bold border border-green-400 dark:border-green-600 bg-green-200 dark:bg-green-900 text-green-950 dark:text-green-200">
-            {shortTitle}
-          </p>
+    <div style={cardContainerStyle} className="group">
+      <div style={cardInnerStyle} className="group-hover:[transform:rotateY(180deg)]">
+        {/* Front of card */}
+        <div
+          style={cardFaceStyle}
+          className="border-green-200 dark:border-slate-700 bg-gradient-to-br from-green-50 to-green-100 dark:from-slate-800 dark:to-slate-900 p-6 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <div className="mb-4 p-4 rounded-full bg-green-200 dark:bg-slate-700">
+            <IconComponent className="w-12 h-12 text-[#00852E] dark:text-green-400" />
+          </div>
+          <h3 className="text-xl font-bold text-green-900 dark:text-green-200 mb-2">{service.shortTitle}</h3>
+          <p className="text-sm text-green-700 dark:text-green-300/80 opacity-75">Hover to learn more</p>
         </div>
-        <h3 className="text-xl lg:text-2xl font-bold text-green-900 dark:text-green-200">{title}</h3>
-      </div>
-      
-      <SubHeading iconName="Target" title="Service Description" />
-      <p className="pl-2 text-sm sm:text-base dark:text-slate-300 mb-4">{desc}</p>
-      
-      <div className="flex flex-col">
-        <SubHeading iconName="Shield" title="Key Features" />
-        <ul className="list-disc list-inside">
-          {features.map((feature, index) => (
-            <li key={index} className="pl-2 text-sm sm:text-base dark:text-slate-300">
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
 
-
-
-
-// Main Services Component
-const ServicesSection = () => {
-  const [active, setActive] = useState(0);
-
-  return (
-    <>      
-      <div className="relative h-max py-12 pb-16">
-        <div className="max-w-6xl mx-auto">
-          
-          <SectionHeading 
-            iconName="Shield"
-            title="Security Services" 
-            className="mb-4" 
-          />
-          
-          <div className="grid grid-cols-12 gap-0 lg:gap-8">
-            <div className="col-span-12 md:col-span-5 p-4 flex flex-col gap-4">
-              
-              <h3 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl font-bold">
-                Comprehensive{" "}
-                <span className="font-extrabold text-[#00852E] dark:text-green-600">
-                  Security
-                </span>{" "}
-                Solutions
-              </h3>
-              
-              <p className="text-base dark:text-slate-400">
-                At AAMZ Security, we provide a full spectrum of security services 
-                tailored to meet the diverse needs of our clients. From industrial 
-                protection to personal security, our expert team delivers reliable 
-                and professional solutions across Pakistan.
-              </p>
-              
-              <div className="mt-6 gap-4 grid grid-cols-6">
-                {services.map((service, index) => (
-                  <ServiceButton
-                    key={service.id}
-                    id={index}
-                    title={service.shortTitle}
-                    iconName={service.icon}
-                    active={active === index}
-                    onClick={setActive}
-                  />
-                ))}
-              </div>
+        {/* Back of card */}
+        <div
+          style={cardBackStyle}
+          className="border-green-300 dark:border-slate-600 bg-gradient-to-br from-green-100 to-green-200 dark:from-slate-900 dark:to-slate-800 p-4 shadow-lg"
+        >
+          <div className="h-full flex flex-col">
+            {/* Header */}
+            <div className="flex items-center gap-2 mb-3 pb-2 border-b border-green-300 dark:border-slate-600">
+              <IconComponent className="w-5 h-5 text-[#00852E] dark:text-green-400" />
+              <span className="text-xs font-bold px-2 py-1 rounded bg-green-300 dark:bg-green-900 text-green-900 dark:text-green-200">
+                {service.shortTitle}
+              </span>
             </div>
-            
-            <div className="col-span-12 md:col-span-7 p-4">
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={service.id}
-                  id={service.id}
-                  title={service.title}
-                  shortTitle={service.shortTitle}
-                  desc={service.desc}
-                  iconName={service.icon}
-                  features={service.features}
-                  active={active === index}
-                />
-              ))}
+
+            {/* Service Description */}
+            <div className="mb-3">
+              <SubHeading iconName="Target" title="Service Description" />
+              <p className="text-xs text-green-800 dark:text-slate-300 leading-relaxed">{service.desc}</p>
+            </div>
+
+            {/* Key Features */}
+            <div className="flex-1">
+              <SubHeading iconName="Shield" title="Key Features" />
+              <ul className="space-y-1">
+                {service.features.slice(0, 4).map((feature: string, index: number) => (
+                  <li key={index} className="text-xs text-green-800 dark:text-slate-300 flex items-start">
+                    <span className="w-1 h-1 bg-[#00852E] dark:bg-green-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                    {feature}
+                  </li>
+                ))}
+                {service.features.length > 4 && (
+                  <li className="text-xs text-green-700 dark:text-green-400 italic">
+                    +{service.features.length - 4} more features
+                  </li>
+                )}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default ServicesSection;
+// Main Services Component
+const ServicesSection = () => {
+  return (
+    <div className="relative h-max py-12 pb-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <SectionHeading iconName="Shield" title="Security Services" className="mb-8" />
+
+        {/* Description Section - Centered */}
+        <div className="text-center mb-12 max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
+            Comprehensive <span className="font-extrabold text-[#00852E] dark:text-green-600">Security</span> Solutions
+          </h3>
+
+          <p className="text-base dark:text-slate-400 leading-relaxed mb-8">
+            At AAMZ Security, we provide a full spectrum of security services tailored to meet the diverse needs of our
+            clients. From industrial protection to personal security, our expert team delivers reliable and professional
+            solutions across Pakistan.
+          </p>
+        </div>
+
+        {/* Service Cards Grid - Full Width */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ServicesSection
