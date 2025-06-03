@@ -22,15 +22,12 @@ export default function HomeCarousel() {
     <div className="max-w-6xl mx-auto mt-8">
       <div className="p-0 md:p-2">
         <Quote>
-          <span className="text-black dark:text-green-600 font-bold">
-            Concern
-          </span>
-          ,{" "}
-          <span className="text-blue-900 dark:text-blue-400 font-bold">
+        <span className="text-green-200 font-bold drop-shadow-sm">Concern</span>,{" "}
+          <span className="text-blue-800 dark:text-blue-400 font-bold">
             Quality
           </span>
           ,{" "}
-          <span className="text-sky-900 dark:text-sky-400 font-bold">Ethics</span>
+          <span className="text-sky-400 dark:text-sky-400 font-bold">Ethics</span>
           &nbsp;:&nbsp; The Strength of Our Serving
         </Quote>
 
