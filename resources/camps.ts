@@ -13,10 +13,7 @@ const camps = [
     activities: [
           "Background Verification",
           "Character Certificate Validation",
-          "Police Clearance Check",
-          "Intelligence Bureau Screening (for sensitive roles)",
           "Interview with Senior Management",
-          "Reference and Recommendation Evaluation",
           "Medical and Fitness Assessment",
         ],
   },

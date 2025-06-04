@@ -23,7 +23,7 @@ const Tiers = () => {
       icon: Shield,
       gradient: "from-green-600 via-green-700 to-green-900",
       imageSection: "top",
-      image: basic,
+      // image: basic,
     },
     {
       id: "elite",
@@ -41,12 +41,18 @@ const Tiers = () => {
       icon: Star,
       gradient: "from-slate-800 via-green-800 to-green-900",
       imageSection: "bottom",
-      image: elite,
+      // image: elite,
     },
   ]
 
   return (
-    <div className="relative py-16 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+    <> 
+      <div
+      className="text-xs py-1 pb-2 border-t border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)]/[0.8] text-center 
+      text-slate-600 dark:text-slate-500 bg-white dark:bg-slate-950"
+      ></div>
+
+    <div className="relative py-16 bg-white dark:bg-black dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -159,6 +165,7 @@ const Tiers = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

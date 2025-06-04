@@ -17,9 +17,28 @@ const Footer = () => {
       </div>
       <div
         className="text-xs py-1 pb-2 border-t border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)]/[0.8] text-center 
-      text-slate-600 dark:text-slate-500 bg-white dark:bg-slate-950"
+        text-slate-600 dark:text-slate-500 bg-white dark:bg-slate-950"
       >
-        Copyright © 2025 JuvoU (OsmanArshid)
+        Copyright © 2025 {" "}
+          <a
+            href="https://juvoucreative.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#c4a571] dark:text-[#e5c185] hover:underline"
+          >
+          JuvoU</a>
+          {" "}
+        (
+        <a
+          href="https://github.com/OsmanArshid"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-600 dark:text-cyan-400 hover:underline"
+        >
+          OsmanArshid
+        </a>
+        )
+
       </div>
     </footer>
   );

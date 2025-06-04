@@ -118,7 +118,7 @@ const ElectronicServices = () => {
       className="border-t border-[rgba(87,199,133,1)] dark:border-[rgba(0,133,46,1)]/[0.8] dark:bg-slate-950"
       ></div>
 
-      <div className="relative py-16 bg-gradient-to-b from-white to-green-50/30 dark:from-slate-900 dark:to-slate-800">
+      <div className="relative py-16 bg-gradient-to-b from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4">
           
           {/* Header Section */}

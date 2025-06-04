@@ -6,7 +6,7 @@ import Link from "next/link";
 import SectionHeading from "../common/SectionHeading";
 import HomeDialog from "./HomeDialog";
 import aamzflag from "/images/logos/AAMZ.png";
-import heroPic from "/images/logos/hero.png";
+import heroPic from "/images/logos/hero1.png";
 
 
 const Hero = () => {
@@ -38,23 +38,23 @@ const Hero = () => {
             title={"AAMZ Security Website"}
           />
           <div className="mt-3">
-            <h1
-              className="max-[500px]:max-w-[380px] max-[1100px]:max-w-[580px] max-[4000px]:max-w-[620px] leading-tight
-              max-[500px]:text-[1.75em] max-[1100px]:text-[2.55em]  max-[1300px]:text-[3em] max-[9300px]:text-[3.25em] font-bold text-gray-900 dark:text-slate-200 max-[900px]:text-center"
-            >
-              Empowering{" "}
-              <span className="text-[#2d5433] dark:text-[#2d5433] font-extrabold">
+            <h1 
+              className="max-[500px]:max-w-[380px] max-[1100px]:max-w-[580px] max-[4000px]:max-w-[620px] leading-tight 
+              max-[500px]:text-[1.75em] max-[1100px]:text-[2.55em]  max-[1300px]:text-[3em] max-[9300px]:text-[3.25em] font-bold text-gray-900 dark:text-slate-200 max-[900px]:text-center" 
+            > 
+            Empowering{" "}
+              <span className="text-green-500 dark:text-green-700 font-extrabold">
                 Security
               </span>
               , shaping new{" "}
-              <span className="text-blue-800 dark:text-blue-500 font-extrabold">
+              <span className="text-orange-600 dark:text-orange-400 font-extrabold">
                 Innovation
               </span>
               , securing the{" "}
-              <span className="text-sky-800 dark:text-sky-500 font-extrabold">
-                Future
-              </span>
-              .
+              <span className="text-emerald-600 dark:text-emerald-400 font-extrabold"> 
+                Future 
+              </span> 
+              . 
             </h1>
           </div>
           <br />
