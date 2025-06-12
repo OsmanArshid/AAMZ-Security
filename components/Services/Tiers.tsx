@@ -117,7 +117,7 @@ const Tiers = () => {
                 <div className="flex-shrink-0 relative">
                   <div className="relative w-80 h-64 lg:w-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
                     <Image
-                      src={tier.image}
+                      src={elite}
                       alt={`${tier.name} Security Personnel`}
                       fill
                       className="object-cover object-center"
