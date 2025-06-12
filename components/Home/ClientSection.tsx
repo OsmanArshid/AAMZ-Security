@@ -119,12 +119,7 @@ export default function ClientSection() {
           {/* Scrolling container */}
           <div
             ref={scrollRef}
-            className="flex items-center gap-12 py-6 overflow-hidden"
-            style={{ 
-              scrollbarWidth: "none", 
-              msOverflowStyle: "none",
-              WebkitScrollbar: { display: "none" }
-            }}
+            className="flex items-center gap-12 py-6 overflow-hidden scrollbar-hide"
           >
             {clients.map((client, index) => (
               <div key={index} className="flex-shrink-0 flex flex-col items-center">
