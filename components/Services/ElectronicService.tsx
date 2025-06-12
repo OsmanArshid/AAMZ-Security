@@ -1,24 +1,37 @@
 "use client"
 
-import electronicServices from "../../resources/electronicServices";
+import electronicServices, { ElectronicService } from "../../resources/electronicServices";
 import { useState } from "react"
 import { Shield, Scan, Flame, Monitor, DoorOpen, Fingerprint, CreditCard, Clock,
-        AlertTriangle, Search, Camera, Zap, ChevronRight, CheckCircle} from "lucide-react"
+        AlertTriangle, Search, Camera, Zap, ChevronRight, CheckCircle, LucideIcon} from "lucide-react"
 
+// Icon mapping type
+type IconName = 'DoorOpen' | 'Scan' | 'Flame' | 'Monitor' | 'Shield' | 'Fingerprint' | 
+               'CreditCard' | 'Clock' | 'AlertTriangle' | 'Search' | 'Camera' | 'Zap';
 
 // Get icon component
-const getIconComponent = (iconName) => {
-  const iconMap = {
+const getIconComponent = (iconName: string): LucideIcon => {
+  const iconMap: Record<IconName, LucideIcon> = {
     DoorOpen, Scan, Flame, Monitor, Shield, Fingerprint,
     CreditCard, Clock, AlertTriangle, Search, Camera, Zap,
   }
   
-  return iconMap[iconName] || Shield
+  return iconMap[iconName as IconName] || Shield
 }
 
+// Component props interfaces
+interface ElectronicServiceCardProps {
+  service: ElectronicService;
+  isActive: boolean;
+  onClick: (serviceId: string) => void;
+}
+
+interface ServiceDetailsPanelProps {
+  service: ElectronicService | undefined;
+}
 
 // Electronic Service Card Component
-const ElectronicServiceCard = ({ service, isActive, onClick }) => {
+const ElectronicServiceCard: React.FC<ElectronicServiceCardProps> = ({ service, isActive, onClick }) => {
   const IconComponent = getIconComponent(service.icon)
 
   return (
@@ -64,12 +77,11 @@ const ElectronicServiceCard = ({ service, isActive, onClick }) => {
   )
 }
 
-
 // Service Details Panel
-const ServiceDetailsPanel = ({ service }) => {
-  const IconComponent = getIconComponent(service.icon)
-
+const ServiceDetailsPanel: React.FC<ServiceDetailsPanelProps> = ({ service }) => {
   if (!service) return null
+
+  const IconComponent = getIconComponent(service.icon)
 
   return (
     <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-8 border border-green-200 dark:border-slate-700">
@@ -107,8 +119,8 @@ const ServiceDetailsPanel = ({ service }) => {
 }
 
 // Main Electronic Services Component
-const ElectronicServices = () => {
-  const [activeService, setActiveService] = useState(electronicServices[0].id)
+const ElectronicServices: React.FC = () => {
+  const [activeService, setActiveService] = useState<string>(electronicServices[0].id)
 
   const selectedService = electronicServices.find((service) => service.id === activeService)
 
