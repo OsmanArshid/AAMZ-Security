@@ -14,6 +14,9 @@ export const metadata = {
   description: "Official AAMZ Security Website",
   keywords:
     "AAMZ Security, Security, Security Solutions, AAMZ SS, top-tier security services, comprehensive security solutions, integrity, honesty, and transparency, Security Lahore, Best Security Solution",
+  icons: {
+      icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
